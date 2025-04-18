@@ -15,16 +15,6 @@ myLog::~myLog()
         m_log_thread.join();
     }
 
-    // 写入 thread_local 缓冲区最后的日志
-    // {
-    //     std::lock_guard<std::mutex> lock(global_queue_mutex);
-    //     for (auto& log : ThreadLocalBuffers::local_buffer) {
-    //         std::cout << "Writing log size: " << log.size() << std::endl;
-    //         global_log_queue->push(std::move(log));
-    //     }
-    //     ThreadLocalBuffers::local_buffer.clear();
-    // }
-
     // 写入队列剩余日志
     {
         std::lock_guard<std::mutex> lock(global_queue_mutex);
