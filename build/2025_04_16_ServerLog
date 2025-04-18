@@ -1,0 +1,19 @@
+2025-04-16 23:23:14.097278 [info]: [Server] Registered service: testrpc.CalculatorService.Add
+2025-04-16 23:23:14.097302 [info]: [Server] Registered service: testrpc.CalculatorService.Sub
+2025-04-16 23:23:15.099288 [info]: [Client] Received response: 
+2025-04-16 23:23:15.099366 [info]: [Client] Add result = 14
+2025-04-16 23:23:15.101781 [info]: [Client] Received response: 
+2025-04-16 23:23:15.101850 [info]: [Client] Sub result = 6
+2025-04-16 23:23:14.097560 [info]: [Thread] worker loop started
+2025-04-16 23:23:15.099865 [info]: [Thread] added task to scheduler
+2025-04-16 23:23:15.101474 [info]: [Server] Calling method: testrpc.CalculatorService.Sub
+2025-04-16 23:23:15.101581 [info]: [Server] Method call completed: testrpc.CalculatorService.Sub
+2025-04-16 23:23:15.101612 [info]: [Server] Sending response: 
+2025-04-16 23:23:14.097662 [info]: [Thread] worker loop started
+2025-04-16 23:23:14.097606 [info]: [Thread] worker loop started
+2025-04-16 23:23:14.097535 [info]: [Thread] worker loop started
+2025-04-16 23:23:15.098906 [info]: [Thread] added task to scheduler
+2025-04-16 23:23:15.099056 [info]: [Server] Calling method: testrpc.CalculatorService.Add
+2025-04-16 23:23:15.099133 [info]: [Server] Method call completed: testrpc.CalculatorService.Add
+2025-04-16 23:23:15.099177 [info]: [Server] Sending response: 
+2025-04-16 23:23:14.097592 [info]: [Thread] worker loop started

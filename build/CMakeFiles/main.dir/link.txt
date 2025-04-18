@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.dir/src/blockQueue.cpp.o CMakeFiles/main.dir/src/main.cpp.o CMakeFiles/main.dir/src/mini_coroutine.cpp.o CMakeFiles/main.dir/src/my_log.cpp.o CMakeFiles/main.dir/src/my_rpc.cpp.o CMakeFiles/main.dir/src/rpc.pb.cc.o CMakeFiles/main.dir/src/thread_pool.cpp.o -o main  -lprotobuf 
