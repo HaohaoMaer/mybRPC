@@ -104,6 +104,8 @@ void RpcServer::start() {
 }
 
 void RpcServer::handle_client(int fd) {
+    MetricsManager::instance().incr_rpc_calls();
+    MetricsManager::instance().incr_concurrent();
     char buf[1024];
     int len = read(fd, buf, sizeof(buf));
     if (len <= 0) {
@@ -159,6 +161,7 @@ void RpcServer::handle_client(int fd) {
     LOG_INFO(std::string("[Server] Sending response: ") + result);
     write(fd, result.c_str(), result.size());
     close(fd);
+    MetricsManager::instance().decr_concurrent();
 }
 
 std::string RpcClient::call(const std::string& full_method_name, const std::string& args) {

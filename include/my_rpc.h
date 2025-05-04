@@ -20,6 +20,7 @@
 #include "rpc.pb.h"
 #include "my_log.h" 
 #include "thread_pool.h"  // 引入线程池
+#include "metrics_manager.h" 
 //#include <bthread/bthread.h>  // 引入 bthread 库
 
 // =========================
@@ -37,7 +38,6 @@ public:
     void init(int close_log, int log_write, int thread_num);
 
     void log_write();
-
 
     RpcServer(int port) : port_(port) {}
     ~RpcServer();

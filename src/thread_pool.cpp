@@ -2,13 +2,12 @@
 #include "my_log.h"
 
 class ThreadLocalGuard {
-    public:
-        ~ThreadLocalGuard() {
-            std::cout << "[Thread] ThreadLocalGuard destructor called" << std::endl;
-            myLog::get_instance()->flush_local_buffer();
-            LOG_INFO("[Thread] Local logs flushed");
-        }
-    };
+public:
+    ~ThreadLocalGuard() {
+        myLog::get_instance()->flush_local_buffer();
+        LOG_INFO("[Thread] Local logs flushed");
+    }
+};
 
 ThreadPool::ThreadPool(int thread_count) : stop(false) {
     for (int i = 0; i < thread_count; ++i) {

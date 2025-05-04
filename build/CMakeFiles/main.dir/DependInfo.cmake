@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/jackma/projects/mybRPC/src/my_log.cpp" "CMakeFiles/main.dir/src/my_log.cpp.o" "gcc" "CMakeFiles/main.dir/src/my_log.cpp.o.d"
   "/home/jackma/projects/mybRPC/src/my_rpc.cpp" "CMakeFiles/main.dir/src/my_rpc.cpp.o" "gcc" "CMakeFiles/main.dir/src/my_rpc.cpp.o.d"
   "/home/jackma/projects/mybRPC/src/rpc.pb.cc" "CMakeFiles/main.dir/src/rpc.pb.cc.o" "gcc" "CMakeFiles/main.dir/src/rpc.pb.cc.o.d"
+  "/home/jackma/projects/mybRPC/src/status_http_server.cpp" "CMakeFiles/main.dir/src/status_http_server.cpp.o" "gcc" "CMakeFiles/main.dir/src/status_http_server.cpp.o.d"
   "/home/jackma/projects/mybRPC/src/thread_pool.cpp" "CMakeFiles/main.dir/src/thread_pool.cpp.o" "gcc" "CMakeFiles/main.dir/src/thread_pool.cpp.o.d"
   )
 

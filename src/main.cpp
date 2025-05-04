@@ -1,5 +1,6 @@
 #include "serviceImpl.h"
 #include "my_rpc.h"
+#include "status_http_server.cpp"
 // ==========================
 // 示例服务实现：CalculatorService
 // ==========================
@@ -20,42 +21,43 @@ int main() {
         server.start();
     }).detach();
 
-    if ( ThreadLocalBuffers::local_buffer.size() >0 ) {
-        std::cout << "after start of first of" <<  ThreadLocalBuffers::local_buffer[0].size() << std::endl;
-    }
+    std::thread([]() {
+        start_http_status_server(8080);
+    }).detach();
 
     std::this_thread::sleep_for(std::chrono::seconds(1));  // 等待服务器启动
-    std::cout << "after start of first of" <<  ThreadLocalBuffers::local_buffer[0].size() << std::endl;
 
     // 创建客户端
     myrpc::RpcClient client("127.0.0.1", 12345);
-    std::cout << "after start of first of" <<  ThreadLocalBuffers::local_buffer[0].size() << std::endl;
+    while(true){
 
-    // 构造请求：Add 请求
-    testrpc::AddRequest req;
-    req.set_a(10);
-    req.set_b(4);
-    std::string req_bin;
-    req.SerializeToString(&req_bin);
+        // 构造请求：Add 请求
+        testrpc::AddRequest req;
+        req.set_a(10);
+        req.set_b(4);
+        std::string req_bin;
+        req.SerializeToString(&req_bin);
 
-    // 调用 CalculatorService.Add 方法
-    std::string add_resp_bin = client.call("testrpc.CalculatorService.Add", req_bin);
-    testrpc::AddResponse add_resp;
-    add_resp.ParseFromString(add_resp_bin);
-    LOG_INFO(std::string("[Client] Add result = ") + std::to_string(add_resp.sum()));
-    std::cout << "after start of first of" <<  ThreadLocalBuffers::local_buffer[0].size() << std::endl;
+        // 调用 CalculatorService.Add 方法
+        std::string add_resp_bin = client.call("testrpc.CalculatorService.Add", req_bin);
+        // std::cout << MetricsManager::instance().get_rpc_calls() << std::endl;
+        testrpc::AddResponse add_resp;
+        add_resp.ParseFromString(add_resp_bin);
+    }
+    // LOG_INFO(std::string("[Client] Add result = ") + std::to_string(add_resp.sum()));
 
     // 调用 CalculatorService.Sub 方法
-    testrpc::SubRequest reqS;
-    reqS.set_a(10);
-    reqS.set_b(4);
-    std::string reqS_bin;
-    reqS.SerializeToString(&reqS_bin);
-    std::string sub_resp_bin = client.call("testrpc.CalculatorService.Sub", reqS_bin);
-    testrpc::SubResponse sub_resp;
-    sub_resp.ParseFromString(sub_resp_bin);
-    LOG_INFO(std::string("[Client] Sub result = ") + std::to_string(sub_resp.diff()));
-    myLog::get_instance()->flush_local_buffer();
+    // testrpc::SubRequest reqS;
+    // reqS.set_a(10);
+    // reqS.set_b(4);
+    // std::string reqS_bin;
+    // reqS.SerializeToString(&reqS_bin);
+    // std::string sub_resp_bin = client.call("testrpc.CalculatorService.Sub", reqS_bin);
+    // std::cout << MetricsManager::instance().get_rpc_calls() << std::endl;
+    // testrpc::SubResponse sub_resp;
+    // sub_resp.ParseFromString(sub_resp_bin);
+    // LOG_INFO(std::string("[Client] Sub result = ") + std::to_string(sub_resp.diff()));
+    // myLog::get_instance()->flush_local_buffer();
 
     return 0;
 }

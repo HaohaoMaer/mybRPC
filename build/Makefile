@@ -129,12 +129,26 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+#=============================================================================
+# Target rules for targets named pressure_test
+
+# Build rule for target.
+pressure_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pressure_test
+.PHONY : pressure_test
+
+# fast build rule for target.
+pressure_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/build
+.PHONY : pressure_test/fast
+
 src/blockQueue.o: src/blockQueue.cpp.o
 .PHONY : src/blockQueue.o
 
 # target to build an object file
 src/blockQueue.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/blockQueue.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/blockQueue.cpp.o
 .PHONY : src/blockQueue.cpp.o
 
 src/blockQueue.i: src/blockQueue.cpp.i
@@ -143,6 +157,7 @@ src/blockQueue.i: src/blockQueue.cpp.i
 # target to preprocess a source file
 src/blockQueue.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/blockQueue.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/blockQueue.cpp.i
 .PHONY : src/blockQueue.cpp.i
 
 src/blockQueue.s: src/blockQueue.cpp.s
@@ -151,6 +166,7 @@ src/blockQueue.s: src/blockQueue.cpp.s
 # target to generate assembly for a file
 src/blockQueue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/blockQueue.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/blockQueue.cpp.s
 .PHONY : src/blockQueue.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -183,6 +199,7 @@ src/mini_coroutine.o: src/mini_coroutine.cpp.o
 # target to build an object file
 src/mini_coroutine.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mini_coroutine.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/mini_coroutine.cpp.o
 .PHONY : src/mini_coroutine.cpp.o
 
 src/mini_coroutine.i: src/mini_coroutine.cpp.i
@@ -191,6 +208,7 @@ src/mini_coroutine.i: src/mini_coroutine.cpp.i
 # target to preprocess a source file
 src/mini_coroutine.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mini_coroutine.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/mini_coroutine.cpp.i
 .PHONY : src/mini_coroutine.cpp.i
 
 src/mini_coroutine.s: src/mini_coroutine.cpp.s
@@ -199,6 +217,7 @@ src/mini_coroutine.s: src/mini_coroutine.cpp.s
 # target to generate assembly for a file
 src/mini_coroutine.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/mini_coroutine.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/mini_coroutine.cpp.s
 .PHONY : src/mini_coroutine.cpp.s
 
 src/my_log.o: src/my_log.cpp.o
@@ -207,6 +226,7 @@ src/my_log.o: src/my_log.cpp.o
 # target to build an object file
 src/my_log.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_log.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_log.cpp.o
 .PHONY : src/my_log.cpp.o
 
 src/my_log.i: src/my_log.cpp.i
@@ -215,6 +235,7 @@ src/my_log.i: src/my_log.cpp.i
 # target to preprocess a source file
 src/my_log.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_log.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_log.cpp.i
 .PHONY : src/my_log.cpp.i
 
 src/my_log.s: src/my_log.cpp.s
@@ -223,6 +244,7 @@ src/my_log.s: src/my_log.cpp.s
 # target to generate assembly for a file
 src/my_log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_log.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_log.cpp.s
 .PHONY : src/my_log.cpp.s
 
 src/my_rpc.o: src/my_rpc.cpp.o
@@ -231,6 +253,7 @@ src/my_rpc.o: src/my_rpc.cpp.o
 # target to build an object file
 src/my_rpc.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_rpc.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_rpc.cpp.o
 .PHONY : src/my_rpc.cpp.o
 
 src/my_rpc.i: src/my_rpc.cpp.i
@@ -239,6 +262,7 @@ src/my_rpc.i: src/my_rpc.cpp.i
 # target to preprocess a source file
 src/my_rpc.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_rpc.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_rpc.cpp.i
 .PHONY : src/my_rpc.cpp.i
 
 src/my_rpc.s: src/my_rpc.cpp.s
@@ -247,6 +271,7 @@ src/my_rpc.s: src/my_rpc.cpp.s
 # target to generate assembly for a file
 src/my_rpc.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/my_rpc.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/my_rpc.cpp.s
 .PHONY : src/my_rpc.cpp.s
 
 src/rpc.pb.o: src/rpc.pb.cc.o
@@ -255,6 +280,7 @@ src/rpc.pb.o: src/rpc.pb.cc.o
 # target to build an object file
 src/rpc.pb.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rpc.pb.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/rpc.pb.cc.o
 .PHONY : src/rpc.pb.cc.o
 
 src/rpc.pb.i: src/rpc.pb.cc.i
@@ -263,6 +289,7 @@ src/rpc.pb.i: src/rpc.pb.cc.i
 # target to preprocess a source file
 src/rpc.pb.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rpc.pb.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/rpc.pb.cc.i
 .PHONY : src/rpc.pb.cc.i
 
 src/rpc.pb.s: src/rpc.pb.cc.s
@@ -271,7 +298,35 @@ src/rpc.pb.s: src/rpc.pb.cc.s
 # target to generate assembly for a file
 src/rpc.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/rpc.pb.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/rpc.pb.cc.s
 .PHONY : src/rpc.pb.cc.s
+
+src/status_http_server.o: src/status_http_server.cpp.o
+.PHONY : src/status_http_server.o
+
+# target to build an object file
+src/status_http_server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/status_http_server.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/status_http_server.cpp.o
+.PHONY : src/status_http_server.cpp.o
+
+src/status_http_server.i: src/status_http_server.cpp.i
+.PHONY : src/status_http_server.i
+
+# target to preprocess a source file
+src/status_http_server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/status_http_server.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/status_http_server.cpp.i
+.PHONY : src/status_http_server.cpp.i
+
+src/status_http_server.s: src/status_http_server.cpp.s
+.PHONY : src/status_http_server.s
+
+# target to generate assembly for a file
+src/status_http_server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/status_http_server.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/status_http_server.cpp.s
+.PHONY : src/status_http_server.cpp.s
 
 src/thread_pool.o: src/thread_pool.cpp.o
 .PHONY : src/thread_pool.o
@@ -279,6 +334,7 @@ src/thread_pool.o: src/thread_pool.cpp.o
 # target to build an object file
 src/thread_pool.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread_pool.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/thread_pool.cpp.o
 .PHONY : src/thread_pool.cpp.o
 
 src/thread_pool.i: src/thread_pool.cpp.i
@@ -287,6 +343,7 @@ src/thread_pool.i: src/thread_pool.cpp.i
 # target to preprocess a source file
 src/thread_pool.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread_pool.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/thread_pool.cpp.i
 .PHONY : src/thread_pool.cpp.i
 
 src/thread_pool.s: src/thread_pool.cpp.s
@@ -295,7 +352,32 @@ src/thread_pool.s: src/thread_pool.cpp.s
 # target to generate assembly for a file
 src/thread_pool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/thread_pool.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/src/thread_pool.cpp.s
 .PHONY : src/thread_pool.cpp.s
+
+test/pressure_test.o: test/pressure_test.cpp.o
+.PHONY : test/pressure_test.o
+
+# target to build an object file
+test/pressure_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/test/pressure_test.cpp.o
+.PHONY : test/pressure_test.cpp.o
+
+test/pressure_test.i: test/pressure_test.cpp.i
+.PHONY : test/pressure_test.i
+
+# target to preprocess a source file
+test/pressure_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/test/pressure_test.cpp.i
+.PHONY : test/pressure_test.cpp.i
+
+test/pressure_test.s: test/pressure_test.cpp.s
+.PHONY : test/pressure_test.s
+
+# target to generate assembly for a file
+test/pressure_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pressure_test.dir/build.make CMakeFiles/pressure_test.dir/test/pressure_test.cpp.s
+.PHONY : test/pressure_test.cpp.s
 
 # Help Target
 help:
@@ -306,6 +388,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... main"
+	@echo "... pressure_test"
 	@echo "... src/blockQueue.o"
 	@echo "... src/blockQueue.i"
 	@echo "... src/blockQueue.s"
@@ -324,9 +407,15 @@ help:
 	@echo "... src/rpc.pb.o"
 	@echo "... src/rpc.pb.i"
 	@echo "... src/rpc.pb.s"
+	@echo "... src/status_http_server.o"
+	@echo "... src/status_http_server.i"
+	@echo "... src/status_http_server.s"
 	@echo "... src/thread_pool.o"
 	@echo "... src/thread_pool.i"
 	@echo "... src/thread_pool.s"
+	@echo "... test/pressure_test.o"
+	@echo "... test/pressure_test.i"
+	@echo "... test/pressure_test.s"
 .PHONY : help
 
 
